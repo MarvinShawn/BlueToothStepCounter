@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Z7s-1j-ue9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Sports View Controller-->
+        <scene sceneID="Y7g-vw-W7q">
+            <objects>
+                <viewController id="Z7s-1j-ue9" customClass="FDXYNSportsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rs3-PA-hOQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="M5b-sT-Mh1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cxr-uV-eaD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rD8-zf-mhs" customClass="FDARCView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="320"/>
+                                <color key="backgroundColor" red="1" green="0.94001838130000004" blue="0.8989616627" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rD8-zf-mhs" secondAttribute="height" multiplier="1:1" id="LqC-Ny-Pm3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awn-Zs-ENT">
+                                <rect key="frame" x="0.0" y="340" width="160" height="228"/>
+                                <color key="backgroundColor" red="0.29509274130000002" green="0.76623854709999994" blue="0.5273777328" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="每天记录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dayRecordAction:" destination="Z7s-1j-ue9" eventType="touchUpInside" id="6iy-Il-N1j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBj-SO-zpe">
+                                <rect key="frame" x="161" y="340" width="159" height="228"/>
+                                <color key="backgroundColor" red="0.29509274130000002" green="0.76623854709999994" blue="0.5273777328" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="震动闹钟">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="xiaoMiClockAction:" destination="Z7s-1j-ue9" eventType="touchUpInside" id="QuW-lM-Pll"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HrJ-xR-ZBi">
+                                <rect key="frame" x="159" y="340" width="2" height="228"/>
+                                <color key="backgroundColor" red="1" green="0.53862428309999999" blue="0.24132005149999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="HOn-h7-CRB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBu-Md-xi2">
+                                <rect key="frame" x="161" y="360" width="159" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rD8-zf-mhs" firstAttribute="top" secondItem="Rs3-PA-hOQ" secondAttribute="bottom" id="5qq-zx-qPj"/>
+                            <constraint firstItem="Awn-Zs-ENT" firstAttribute="leading" secondItem="Cxr-uV-eaD" secondAttribute="leading" id="Bny-Vn-vrM"/>
+                            <constraint firstItem="Awn-Zs-ENT" firstAttribute="top" secondItem="rD8-zf-mhs" secondAttribute="bottom" id="Cg4-hv-eZo"/>
+                            <constraint firstAttribute="trailing" secondItem="bBu-Md-xi2" secondAttribute="trailing" id="DPm-lU-bpP"/>
+                            <constraint firstAttribute="trailing" secondItem="rD8-zf-mhs" secondAttribute="trailing" id="GmN-P8-AUE"/>
+                            <constraint firstItem="HrJ-xR-ZBi" firstAttribute="centerX" secondItem="Cxr-uV-eaD" secondAttribute="centerX" id="HZ4-bC-KL5"/>
+                            <constraint firstItem="M5b-sT-Mh1" firstAttribute="top" secondItem="Awn-Zs-ENT" secondAttribute="bottom" id="MKJ-VE-rmc"/>
+                            <constraint firstItem="M5b-sT-Mh1" firstAttribute="top" secondItem="uBj-SO-zpe" secondAttribute="bottom" id="MbR-9N-wxs"/>
+                            <constraint firstItem="M5b-sT-Mh1" firstAttribute="top" secondItem="HrJ-xR-ZBi" secondAttribute="bottom" id="Pdc-jS-pAn"/>
+                            <constraint firstItem="HrJ-xR-ZBi" firstAttribute="leading" secondItem="Awn-Zs-ENT" secondAttribute="trailing" id="YI1-gV-hs9"/>
+                            <constraint firstItem="HrJ-xR-ZBi" firstAttribute="top" secondItem="rD8-zf-mhs" secondAttribute="bottom" id="enR-V3-s8D"/>
+                            <constraint firstAttribute="trailing" secondItem="uBj-SO-zpe" secondAttribute="trailing" id="eqX-ux-z04"/>
+                            <constraint firstItem="uBj-SO-zpe" firstAttribute="leading" secondItem="HrJ-xR-ZBi" secondAttribute="trailing" id="gUj-2b-Xtw"/>
+                            <constraint firstItem="uBj-SO-zpe" firstAttribute="top" secondItem="rD8-zf-mhs" secondAttribute="bottom" id="hDj-mw-7Pp"/>
+                            <constraint firstItem="bBu-Md-xi2" firstAttribute="top" secondItem="rD8-zf-mhs" secondAttribute="bottom" constant="20" id="tr5-Ig-kmV"/>
+                            <constraint firstItem="bBu-Md-xi2" firstAttribute="width" secondItem="uBj-SO-zpe" secondAttribute="width" id="xFt-2j-Idz"/>
+                            <constraint firstItem="rD8-zf-mhs" firstAttribute="leading" secondItem="Cxr-uV-eaD" secondAttribute="leading" id="zVU-Yo-BPS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arcView" destination="rD8-zf-mhs" id="JsC-AR-cPl"/>
+                        <outlet property="clockTimeLabel" destination="bBu-Md-xi2" id="L4p-ed-7jM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VS9-ro-Gh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="136"/>
+        </scene>
+    </scenes>
+</document>
